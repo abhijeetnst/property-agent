@@ -14,6 +14,7 @@ langchain-google-genai>=4.0.0,<5.0
 pydantic>=2.0.0,<3.0
 ddgs>=9.0.0,<10.0
 
-# RAG / Knowledge Base
-chromadb>=1.0.0,<2.0
-sentence-transformers>=3.0.0,<4.0
+# Note: chromadb and sentence-transformers are only needed for the
+# offline knowledge base builder (rag/build_knowledge_base.py).
+# The runtime RAG retriever uses lightweight lexical search instead.
+# Install them locally with: pip install chromadb sentence-transformers
